@@ -1,3 +1,4 @@
+// Hasketball object interation with functions
 function gameObject() {
     const object = {
       home: {
