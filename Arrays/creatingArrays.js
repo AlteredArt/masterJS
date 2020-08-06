@@ -1,4 +1,4 @@
-// creating an array
+// creating an array with the constreuctor function
 class MyArray {
   constructor(){
     this.length = 0;
