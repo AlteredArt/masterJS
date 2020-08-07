@@ -1,4 +1,4 @@
-// creating an array with the constreuctor function
+// creating an array with the constructor function
 class MyArray {
   constructor(){
     this.length = 0;
@@ -34,8 +34,8 @@ class MyArray {
 const newArray = new MyArray();
 newArray.push("hi")
 newArray.push("you")
-newArray.get()
+newArray.get(1)
 newArray.push('!')
-newArray.delete();
-newArray.pop();
+// newArray.delete(0);
+// newArray.pop();
 console.log(newArray)

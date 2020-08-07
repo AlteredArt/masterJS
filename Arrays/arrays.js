@@ -18,9 +18,5 @@ console.log("array unshift", characters, "add to begin");
 
 characters.shift("R2D2");
 console.log("array shift", characters, "remove from begin");
-
-characters.sort();
-console.log("array sort alpha", characters);
-
-characters.includes();
-console.log("includes",selectedColors.includes('red'));
+console.log("array sort alpha", characters.sort());
+console.log("includes",characters.includes("luke"));
