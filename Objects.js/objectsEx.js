@@ -1,4 +1,4 @@
-object literal objects are made of properties
+// object literal objects are made of properties
 var dog = {"name":"Woody",type:"dog"};
 var cat = {"name":"Waffles", type: "cat"};
 console.log(dog);
@@ -9,11 +9,11 @@ console.log(petNames);
 var pets = [dog, cat];
 console.log(pets)
 
-add to an array
+// add to an array
 pets.push({"name": "Chloe", type:"cat"})
 console.log(pets[2])
 
-add to an object
+// add to an object
 cat.age = 2;
 dog["age"] = 12;
 console.log(pets);
@@ -23,7 +23,7 @@ pets[2]["age"] = 6;
 pets[1].hungry = true;
 console.log(pets);
 
-nested loops
+// nested loops
 let bigHero = {characters: [
   {name:"hiro", voice:"Ryan Potter"},
   {name:"Baymax", voice:"Scott Adsit"},
@@ -49,3 +49,6 @@ person.name = "John";
 let selection = "name";
 person[selection]= 'Mary';
 console.log(person.name)
+
+
+
