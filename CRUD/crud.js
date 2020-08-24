@@ -83,6 +83,4 @@ dogForm.addEventListener('submit', () => {
     }).then(parseJSON)
         .then(console.log)
         .then(dogForm.reset())
-
-
 })
