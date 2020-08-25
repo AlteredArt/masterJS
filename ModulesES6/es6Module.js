@@ -1,5 +1,5 @@
-const _radius = new WeakMap();
-
+// Done
+// create a class and export it
 export class Circle {
     constructor(radius){
         _radius.set(this, radius);
@@ -10,3 +10,5 @@ export class Circle {
 
     }
 }
+// creating a weak map in set
+const _radius = new WeakMap();

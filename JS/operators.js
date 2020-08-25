@@ -1,3 +1,4 @@
+// Work on operatrors
 let x = 10;
 let y = 3;
 console.log(x-y);
@@ -33,7 +34,7 @@ console.log(type)
 
 //logical operator with non booleans
 //true && true = true
-// true ||or false
+// true || (or) false
 // !not operator
 
 //bitwise operators
