@@ -1,5 +1,4 @@
 // done
-// reverse a string
 //reverse a string with a for loop
 function reverse(str){
   if (!str || str.length < 2 || typeof str !== "string"){
