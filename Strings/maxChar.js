@@ -1,3 +1,4 @@
+// Done
 // return the char most used in a string
 // What is the most common character in a string?
 // Does string A have the same characters as stringB?
