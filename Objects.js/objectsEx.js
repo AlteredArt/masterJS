@@ -13,6 +13,18 @@ console.log(pets)
 pets.push({"name": "Chloe", type:"cat"})
 console.log(pets[2])
 
+// spread
+const dog1 = {firstName: "buckley", breed: "lab Mix"}
+const dog2 = {firstName: "Ginny", breed: "American Fox Hound"}
+const newObject = {...dog1}
+console.log(newObject)
+
+// Destructuring
+const buckley = {fullname: "Wiggley F. Buckley", food: "Peanut Butter"}
+const {fullName} = buckley
+console.log(fullName)
+
+
 // add to an object
 cat.age = 2;
 dog["age"] = 12;
