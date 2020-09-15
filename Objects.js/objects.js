@@ -1,5 +1,5 @@
 // done
-console.log('objects')
+
 // variable of data has and object with an array
 var data = {
     name: "jared",
@@ -11,13 +11,18 @@ var data = {
         {facebook : "jared.facebook.com"},
         {twitter : "jared.twitter.com"},
         {linkedIn : "jared.linkedin.com"},
-    ]
+    ],
+    goals: ["work out", "eat less"],
+    shout: function() {
+        console.log("AHHHH")
+    }
 };
 
-// in console
 console.log('data object', data)
 console.log('name', data.name)
 console.log('online_places 1', data.online_places[1])
+console.log("goals 1", data.goals[1])
+console.log('shout function', data.shout())
 // change name
 data.name = 'Rico'
 console.log('new name', data.name)
@@ -39,8 +44,6 @@ for (let i = 0; i <= data.online_places.length; i++){
 }
 
 
-
-
 // loop through objects must be an object
 var data2 = {
     name: "jared",
@@ -59,3 +62,15 @@ var data2 = {
         console.log('keys of data 2',key)
     }    
 
+var list = [
+    {
+        username: "waffles",
+        password: "Waffles1"
+    },
+    {
+        username: "Chloe",
+        password: "Chloe2"
+    }
+]
+
+console.log("list 0", list[0].username)

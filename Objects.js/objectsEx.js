@@ -19,11 +19,6 @@ const dog2 = {firstName: "Ginny", breed: "American Fox Hound"}
 const newObject = {...dog1}
 console.log(newObject)
 
-// Destructuring
-const buckley = {fullname: "Wiggley F. Buckley", food: "Peanut Butter"}
-const {fullName} = buckley
-console.log(fullName)
-
 
 // add to an object
 cat.age = 2;
