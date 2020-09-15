@@ -23,16 +23,3 @@ console.log(dumbAss, goodCat, badCat);
 let j =[100,200,300,400,500]
 let [k, ...l] = j
 console.log(k, l)
-
-// destructing objects
-let wizard = {magical: true, power:10};
-// let magical = wizard.magical;
-// let power = wizard.power;
-let {magical, power}= wizard;
-console.log(magical, power)
-
-let cast= true
-let strength = 2
-let ranger = {cast: false, strength: 9};
-({cast, strength} = ranger);
-console.log(cast, strength);

@@ -34,7 +34,7 @@ class MyArray {
 const newArray = new MyArray();
 newArray.push("hi")
 newArray.push("you")
-newArray.get(1)
+console.log(newArray.get(1));
 newArray.push('!')
 // newArray.delete(0);
 // newArray.pop();
