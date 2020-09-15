@@ -1,3 +1,6 @@
+//static methods
+console.log("static methods")
+
 class Circle {
     constructor(radius){
         this.radius = radius;
@@ -11,15 +14,15 @@ class Circle {
     }
 }
 // static methods are avail on the class itself not the object instance
-// const circle = new Circle(1);
-// static methods are only availe on the class itself
-const circle = Circle.parse('{"radius": 1}')
-
+const circle = new Circle(3);
 console.log(circle)
+// static methods are only availe on the class itself
+const circle2 = Circle.parse('{"radius": 1}')
+console.log(circle2)
 
 class Math2 {
     static abs(value){
-
+        return value
     }
 }
-Math2.abs()
+console.log(Math2.abs(5))

@@ -1,5 +1,13 @@
 // done
-
+// For in loops
+// interating an object
+const person = {
+    name: 'Mosh',
+    age: 30
+  };
+  
+  for (let key in person)
+  console.log(key, person[key]);
 // variable of data has and object with an array
 var data = {
     name: "jared",

@@ -1,4 +1,17 @@
 // Arrays are numbered lists with indexes
+
+// in an Array
+const colors = ['red', 'blue', 'green'];
+for (let index in colors)
+console.log(index, colors[index])
+
+
+// for of ideal for arrays
+for (let color of colors)
+  console.log(color);
+
+
+
 console.log('Starting Arrays')
 var characters = ['Luke', 'Leia', 'Han', 'Chewie'];
 // character array
