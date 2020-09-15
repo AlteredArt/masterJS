@@ -1,18 +1,20 @@
 // getters and setters in es6 classes
-const _radius = new WeakMap();
+const _area = new WeakMap();
 
-class Circle {
-    constructor(radius){
-        _radius.set(this, radius);
+class Square {
+    constructor(area){
+        _area.set(this, area);
     }
-    get radius(){
-        return _radius.get(this);
+    get area(){
+        return _area.get(this);
     }
 
-    set radius(value) {
-        if (value <= 0) throw new Error('invalid radius')
-        _radius.set(this, value);
+    set area(value) {
+        if (value <= 0) throw new Error('invalid area')
+        _area.set(this, value);
     }
 }
 
-const c = new Circle(1); 
+const s1 = new Square(5); 
+console.log(s1)
+console.log("square area", s1.area)

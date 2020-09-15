@@ -12,7 +12,7 @@ class Circle {
     [_draw](){}
 }
 const c = new Circle(1);
-c.radius
+console.log(c.radius)
 
 // use es6 weakMaps to implement private properties and methods
 const _shape = new WeakMap();

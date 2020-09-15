@@ -1,8 +1,9 @@
-const BASE_URL = 'https://dogs-backend.herokuapp.com/dogs'
 const dogsContainer = document.querySelector('.dogs-container')
 const dogForm = document.querySelector('.dog-form')
-
 console.log(dogsContainer)
+
+//Fetch URL
+const BASE_URL = 'https://dogs-backend.herokuapp.com/dogs'
 fetch(BASE_URL)
     .then(parseJSON)
     .then(dogs => {
@@ -11,6 +12,7 @@ fetch(BASE_URL)
 function parseJSON(response) {
     return response.json()
 }
+//Create Dog Card
 function createDogCard(dog) {
     const dogCard = document.createElement('div')
     dogCard.className = 'card'
@@ -23,7 +25,9 @@ function createDogCard(dog) {
             </div>
             
         `
+        //Delete Button
     const deleteButton = document.createElement('button')
+    deleteButton.setAttribute("class", "btn-danger");
     deleteButton.textContent = 'DELETE'
     deleteButton.addEventListener('click', () => {
         console.log("event.target", event.target.parentNode)
@@ -31,7 +35,7 @@ function createDogCard(dog) {
             method: 'DELETE'
         }).then(event.target.parentNode.remove())
     })
-
+//Edit Dog Form
     const editDogForm = document.createElement('form')
     editDogForm.className = 'form-group'
     editDogForm.innerHTML = `
@@ -47,6 +51,7 @@ function createDogCard(dog) {
     dogCard.append(editDogForm, deleteButton)
     dogsContainer.appendChild(dogCard)
 }
+//Edit Dog
 function editDog(id) {
     const age = document.getElementById(`${id}`).value
     console.log(age)
@@ -83,4 +88,20 @@ dogForm.addEventListener('submit', () => {
     }).then(parseJSON)
         .then(console.log)
         .then(dogForm.reset())
+})
+//Licks
+const licks = document.querySelector(`#lick-button`)
+const lickNumber = document.querySelector(`#lick-counter`)
+licks.addEventListener('click', () => {
+    let lickCount = parseInt(lickNumber.innerText) 
+    lickNumber.innerText = lickCount + 1 
+
+    fetch(BASE_URL, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({  })
+    })
 })
