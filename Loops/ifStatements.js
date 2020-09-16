@@ -29,3 +29,9 @@ const hello = (firstName, lastName) => {
   }
 }
 hello("Waffles", "Chloe")
+
+//If Else If
+let role = "guest"
+if (role === 'guest') console.log('Guest User');
+else if (role === 'moderator') console.log("Moderator User")
+else console.log('Unknown User');
