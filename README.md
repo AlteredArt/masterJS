@@ -1,2 +1,2 @@
 # masterJS
-evrything you need to know about javascript. ust start a simple light server and open your console tools.
+Everything you need to know about javascript. Just start a simple server and open your console tools.
