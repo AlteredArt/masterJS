@@ -11,6 +11,11 @@ for (let color of colors)
   console.log(color);
 
 
+//use strict es5 for concat
+var a = [7,8,9]
+var b = [6].concat(a, [10])
+console.log("concat", b)
+
 
 console.log('Starting Arrays')
 var characters = ['Luke', 'Leia', 'Han', 'Chewie'];
