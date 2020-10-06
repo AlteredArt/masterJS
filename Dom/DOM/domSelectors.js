@@ -7,7 +7,7 @@ console.log("get el by id:", document.getElementById("first"));
 console.log("get el by ref:", document.getElementsByClassName("second")[0]);
 //Query Selector
 console.log("query selector:", document.querySelector("li"));
-console.log("query all", document.querySelectorAll("li, h1"));
+console.log("query all:", document.querySelectorAll("li, h1"));
 //get attribute
 console.log("get attribute:", document.querySelector("li").getAttribute("random"));
 //Set Attribute

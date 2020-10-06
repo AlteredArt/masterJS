@@ -9,6 +9,20 @@
 </head>
 
 <body>
+  <script>function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+    // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('break'), 'You did not select the right element')
+    // Viewing DOM Elements
+    console.log(p)
+// console.dir(p)
+  </script>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
   <h1>Shopping List</h1>
   <br />
   <p id="first">Get it done today.</p>
@@ -25,7 +39,7 @@
     <li>Birthday Cake</li>
     <li>Candles</li>
   </ul>
-  <!-- <script src="./domSelectors.js"></script> -->
+  <script src="./domSelectors.js"></script>
   <script src="./domEvents.js"></script>
 </body>
 

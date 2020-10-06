@@ -1,55 +1,55 @@
 console.log('linked lists')
 
 class Node {
-    //remeber the constructor function is called 
-    //everytime we create a new instance of a class
-    //cunstructor will take in two properties
-        // one the data
-        // two the next node along the chain
-     //in case a next node is not passed in we defauly next to null
+    //remember the constructor function is called 
+    //every time we create a new instance of a class
+    //constructor will take in two properties
+    // one the data
+    // two the next node along the chain
+    //in case a next node is not passed in we default next to null
     constructor(data, next = null) {
-       this.data = data;
-       this.next = next;
+        this.data = data;
+        this.next = next;
     }
 }
 
 class LinkedList {
-    constructor(){
+    constructor() {
         this.head = null;
     }
-    
-// insert the first data and create a new instance of node
+
+    // insert the first data and create a new instance of node
     insertFirst(data) {
-        // this.head prevents us from overwritting the first node
+        // this.head prevents us from over writing the first node
         this.head = new Node(data, this.head);
     }
-// check the size of the linked list by number of nodes
+    // check the size of the linked list by number of nodes
     size() {
         let counter = 0;
         let node = this.head;
         // our while loop checks to see if there is a head node assigned
-        while(node) {
-            // immediatly increase the counter because we know one node exists at this point
+        while (node) {
+            // immediately increase the counter because we know one node exists at this point
             counter++;
             // here we will look at the next node and determine if it's another node or the tail which is null.
             node = node.next;
         }
     }
-// get the first node
-    getFirst () {
+    // get the first node
+    getFirst() {
         return this.head
     }
-// get the last node
+    // get the last node
     getLast() {
         // start by saying if there is no head node return null and exit the loop
-        if(!this.head){
+        if (!this.head) {
             return null;
         }
         // here we will bring in our loop used in the size function
         let node = this.head;
         // here we are saying if node.next doesn't exist we must be at the tail now and return this node
         while (node) {
-            if(!node.next){
+            if (!node.next) {
                 return node;
             }
             // otherwise update the node and re run the while loop
@@ -58,17 +58,17 @@ class LinkedList {
     }
 
     removeFirst() {
-        if(!this.head) {
+        if (!this.head) {
             return null;
         }
         this.head = this.head.next
     }
 
-    removeLast () {
+    removeLast() {
         if (!this.head) {
             return null;
         }
-        if(!this.head.next) {
+        if (!this.head.next) {
             this.head = null;
             return;
         }
@@ -81,7 +81,7 @@ class LinkedList {
         previous.next = null;
     }
 
-    insertLast (data) {
+    insertLast(data) {
         const last = this.getLast();
         if (last) {
             last.next = new Node(data);
@@ -91,7 +91,7 @@ class LinkedList {
     }
 
 
-    forEach (fn){
+    forEach(fn) {
         let node = this.head;
         let counter = 0;
         while (node) {
@@ -100,56 +100,56 @@ class LinkedList {
             counter++
         }
     }
-    *[Symbol.iterator](){
+    *[Symbol.iterator]() {
         let node = this.head;
         while (node) {
-            yeild node;
+            yield node;
             node = node.next;
         }
     }
 
-    removeAt (index) {
-        if(!this.head){
+    removeAt(index) {
+        if (!this.head) {
             return;
         }
-        if(index === 0) {
+        if (index === 0) {
             this.head = this.head.next;
             return;
         }
-        const previous = this.getAt(index -1);
+        const previous = this.getAt(index - 1);
         if (!previous || !previous.next) {
             return;
         }
         previous.next = previous.next.next;
     }
 
-    insertAt (index){
-        if(!this.head ){
+    insertAt(index) {
+        if (!this.head) {
             this.head = new Node(data);
             return;
         }
-        if(index === 0) {
+        if (index === 0) {
             this.head = new Node(data, this.head);
             return;
         }
-        const previous = this.getAt(index -1 || this.getLast());
+        const previous = this.getAt(index - 1 || this.getLast());
         const node = new Node(data, previous.next);
         previous.next = node;
     }
-// clear the linked list
-    clear(){
+    // clear the linked list
+    clear() {
         // this sets the head to null and destroys the link list structure
         this.head = null;
     }
 
-// get at a certain node takes in index as a parameter
+    // get at a certain node takes in index as a parameter
     getAt(index) {
         // start with a counter and setting node to the head
         let counter = 0
         let node = this.head;
         // start a while loop that takes our node variable and compares our counter to the index param
         while (node) {
-            if(counter === index){
+            if (counter === index) {
                 // if its the same return the node
                 return node;
             }
@@ -163,7 +163,7 @@ class LinkedList {
 }
 
 
-function midpoint(list){
+function midpoint(list) {
     let slow = list.getFirst();
     let fast = list.getFirst();
 
