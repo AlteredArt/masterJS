@@ -47,7 +47,8 @@ Promise.all(urls.map(url => {
     console.log('async', array[2])
     console.log('async', array[3])
 })
-    .catch(err => console.log('uggh error', err))
+    .catch(err => console.log('bad error', err))
+
     //new in es9
     .finally(() => console.log('extra data'))
 

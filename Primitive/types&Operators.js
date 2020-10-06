@@ -5,9 +5,9 @@ valueTypes = {
     number= 23,
     string= "String",
     boolean = true,
-    symbol = *,
+    // symbol = *,
     undefined = undefined,
-    null = null
+    // null = null
 }
 
 referenceTypes = ['Objects', 'Functions', 'Arrays']

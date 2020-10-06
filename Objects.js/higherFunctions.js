@@ -10,11 +10,12 @@ const animals = {
 
 
 function objectSpread(p1, p2, p3) {
-    console.log('tiger', p1)
-    console.log('lion', p2)
-    console.log('rest', p3)
+    console.log('fn tiger:', p1)
+    console.log('fn lion:', p2)
+    console.log('fn rest:', p3)
 }
 
 const { tiger, lion, ...rest } = animals;
-objectSpread(tiger, lion, rest)
+
+objectSpread(animals)
 
