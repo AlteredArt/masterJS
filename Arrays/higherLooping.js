@@ -9,6 +9,9 @@ const newArray = array.forEach((num) => {
 })
 console.log("foreach:", double)
 
+//foreach again
+let forEach = array.forEach((item, index) => console.log('forEach2:', item, index))// console.log("foreach:", forEach)
+
 
 
 // for each loop, convert all the names to lower case besides thorin
