@@ -1,3 +1,7 @@
+Object.keys(obj)
+Object.values(obj)
+Object.entries(obj)
+
 // For in loops
 // object literal objects are made of properties
 var dog = { "name": "Woody", type: "dog" };

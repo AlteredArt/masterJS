@@ -4,6 +4,9 @@ const array = [1, 2, [3, 4, [5]]]
 console.log("flat:", array.flat(2))
 console.log("spread:", ...array)
 
+//concat
+const concat = (...arrays) =>
+    arrays.reduce((result, arr) => result.concat(arr), []);
 
 //Flat Map
 jurassicPark = [[1, 2], 4, 5, [6, 7[8, 9]]]
